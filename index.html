@@ -18,6 +18,11 @@
             padding: 20px;
         }
         .shipping-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
             background: #fff;
             border-radius: 20px;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1);
@@ -57,7 +62,9 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        .content-grid { display: grid; gap: 25px; }
+        .content-grid {
+    width: 90%;
+    margin: 0 auto; display: grid; gap: 25px; }
         .field-group {
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
             border-radius: 16px;
@@ -89,17 +96,20 @@
             border-radius: 50%;
         }
         .field-value {
+    font-size: 22px;
             font-size: 18px;
             font-weight: 600;
             color: #1a202c;
             word-break: break-word;
         }
         .field-value.placeholder {
+    font-size: 18px;
             color: #94a3b8;
             font-style: italic;
             font-weight: 400;
         }
         .company-info {
+    justify-content: center;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
@@ -139,10 +149,17 @@
             font-weight: 500;
         }
         @media (max-width: 640px) {
-            .shipping-label { padding: 25px; margin: 10px; }
-            .company-info { grid-template-columns: 1fr; }
+            .shipping-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; padding: 25px; margin: 10px; }
+            .company-info {
+    justify-content: center; grid-template-columns: 1fr; }
             .header h1 { font-size: 24px; }
-            .field-value { font-size: 16px; }
+            .field-value {
+    font-size: 22px; font-size: 16px; }
         }
         
 @page {
@@ -162,6 +179,11 @@
         padding: 0;
     }
     .shipping-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
         margin: 0;
         padding: 0;
         border-radius: 0;
@@ -177,6 +199,11 @@
 
             body { background: white; margin: 0; padding: 0; }
             .shipping-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
                 box-shadow: none;
                 border: 2px solid #e2e8f0;
                 margin: 0;
@@ -205,6 +232,11 @@
         padding: 0;
     }
     .shipping-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
         margin: 0;
         padding: 0;
         border-radius: 0;
@@ -242,11 +274,12 @@
                 </div>
                 <div class="field-group">
                     <div class="field-label">Destinatário</div>
-                    <div class="field-value" id="campoDestinatario">Ingredion (046)</div><div class="no-print" style="margin-top:10px;"><select id="destinatarioSelect" onchange="atualizarDestinatario()" style="width: 100%; padding: 8px; font-size: 16px;"><option value="INGREDION (046)">046 - INGREDION (Ingredion (046))</option><option value="FILIAL SP (002)">002 - FILIAL SP (Itapecerica da Serra - SP)</option><option value="ELDORADO (028)">028 - ELDORADO (Três Lagoas - MS)</option><option value="BRACELL (041)">041 - BRACELL (Lençóis Paulista - SP)</option><option value="BRACELL TISSUE (041.2)">041.2 - BRACELL TISSUE (Lençóis Paulista - SP)</option><option value="BRACELL PARADA STAR (041.3)">041.3 - BRACELL PARADA STAR (Lençóis Paulista - SP)</option><option value="BRACELL PÁTIO DE MADEIRA (041.4)">041.4 - BRACELL PÁTIO DE MADEIRA (Lençóis Paulista - SP)</option><option value="BRACELL COMPRESSORES (041.5)">041.5 - BRACELL COMPRESSORES (Lençóis Paulista - SP)</option><option value="RAÍZEN (042)">042 - RAÍZEN (Morro Agudo - SP)</option><option value="SUZANO (045)">045 - SUZANO (Limeira - SP)</option></select></div>
+                    <div class="field-value" id="campoDestinatario" style="font-size: 20px;">Ingredion (046)</div><div class="no-print" style="margin-top:10px;"><select id="destinatarioSelect" onchange="atualizarDestinatario()" style="width: 100%; padding: 8px; font-size: 16px;"><option value="INGREDION (046)">046 - INGREDION (Ingredion (046))</option><option value="FILIAL SP (002)">002 - FILIAL SP (Itapecerica da Serra - SP)</option><option value="ELDORADO (028)">028 - ELDORADO (Três Lagoas - MS)</option><option value="BRACELL (041)">041 - BRACELL (Lençóis Paulista - SP)</option><option value="BRACELL TISSUE (041.2)">041.2 - BRACELL TISSUE (Lençóis Paulista - SP)</option><option value="BRACELL PARADA STAR (041.3)">041.3 - BRACELL PARADA STAR (Lençóis Paulista - SP)</option><option value="BRACELL PÁTIO DE MADEIRA (041.4)">041.4 - BRACELL PÁTIO DE MADEIRA (Lençóis Paulista - SP)</option><option value="BRACELL COMPRESSORES (041.5)">041.5 - BRACELL COMPRESSORES (Lençóis Paulista - SP)</option><option value="RAÍZEN (042)">042 - RAÍZEN (Morro Agudo - SP)</option><option value="SUZANO (045)">045 - SUZANO (Limeira - SP)</option></select></div>
                 </div>
             </div>
             <div class="field-group contact-section">
                 <div class="field-label">Aos Cuidados de</div>
+<style>@media print {.contact-section .field-value {font-size: 28px !important;}}</style>
                 <div class="field-value placeholder">Nome do Responsável</div>
             </div>
             <div class="field-group materials-section">
